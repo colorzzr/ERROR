@@ -1,0 +1,213 @@
+#############################################################
+#############################################################
+Running Testcase 1
+#############################################################
+#############################################################
+
+Running the following input on your program:
+=============================================================
+maxVal 3 10
+insertR r0 10.25 0 1
+insertR r1 50 1 2
+modifyR r0 200 
+printR r1
+printR all
+printNode 1
+printNode all
+-------------------------------------------------------------
+
+ERROR: your program exited with a non-zero exit code.
+This means that the program crashed due to a run-time
+error or that your main function returned a value other
+than zero.  Make sure to fix this error before submitting,
+because it may result in a loss of marks!
+
+Your program went into an infinite loop.
+
+#############################################################
+#############################################################
+Running Testcase 2
+#############################################################
+#############################################################
+
+Running the following input on your program:
+=============================================================
+maxVal 2 3
+insertR r0 100 0 1
+insertR r1 200 1 2
+insertR r2 300 0 2
+printR all
+deleteR all
+printR all
+insertR r0 1000 1 2
+insertR r1 2000 0 1
+insertR r2 3000 0 2
+printR all
+maxVal 3 12
+printR all
+-------------------------------------------------------------
+
+ERROR: your program exited with a non-zero exit code.
+This means that the program crashed due to a run-time
+error or that your main function returned a value other
+than zero.  Make sure to fix this error before submitting,
+because it may result in a loss of marks!
+
+Your program went into an infinite loop.
+
+#############################################################
+#############################################################
+Running Testcase 3
+#############################################################
+#############################################################
+
+Running the following input on your program:
+=============================================================
+maxVal 0 6
+maxVal 2 6
+modifyR r0 100
+insertR r0 200 0 3
+insertR r1 200 0 1
+insertR r2 200 0 1
+insertR r3 200 0 1
+insertR r4 200 0 2
+insertR r5 200 0 2
+insertR r6 200 0 2
+insertR r7 200 1 2
+insertR r8 200 1 2
+-------------------------------------------------------------
+
+ERROR: your program exited with a non-zero exit code.
+This means that the program crashed due to a run-time
+error or that your main function returned a value other
+than zero.  Make sure to fix this error before submitting,
+because it may result in a loss of marks!
+
+Your program went into an infinite loop.
+
+#############################################################
+#############################################################
+Running Testcase 4
+#############################################################
+#############################################################
+
+Running the following input on your program:
+=============================================================
+maxVal 3 12
+insertR r0 200 0 1
+insertR r1 200 0 1
+insertR r2 200 0 1
+insertR r3 200 0 1
+insertR r4 200 0 1
+insertR r5 200 0 2
+insertR r6 200 1 2
+-------------------------------------------------------------
+
+ERROR: your program exited with a non-zero exit code.
+This means that the program crashed due to a run-time
+error or that your main function returned a value other
+than zero.  Make sure to fix this error before submitting,
+because it may result in a loss of marks!
+
+Your program went into an infinite loop.
+
+#############################################################
+#############################################################
+Running Testcase 5
+#############################################################
+#############################################################
+
+Running the following input on your program:
+=============================================================
+maxVal 10 10
+insertR r0 100 0 1
+insertR r1 100 0 1
+insertR r2 100 0 1
+insertR r3 100 1 3
+deleteR all
+maxVal 12 12
+insertR r0 200 0 1
+insertR r1 200 0 2
+insertR r2 200 0 3
+insertR r3 200 1 5
+printR all
+deleteR all
+deleteR all
+printR all
+-------------------------------------------------------------
+
+ERROR: your program exited with a non-zero exit code.
+This means that the program crashed due to a run-time
+error or that your main function returned a value other
+than zero.  Make sure to fix this error before submitting,
+because it may result in a loss of marks!
+
+Your program went into an infinite loop.
+
+#############################################################
+#############################################################
+Running Testcase 6
+#############################################################
+#############################################################
+
+Running the following input on your program:
+=============================================================
+maxVal 10000 10
+insertR r0 100 0 10000
+printR all
+printNode 0
+printNode 10000
+-------------------------------------------------------------
+
+ERROR: your program exited with a non-zero exit code.
+This means that the program crashed due to a run-time
+error or that your main function returned a value other
+than zero.  Make sure to fix this error before submitting,
+because it may result in a loss of marks!
+
+Your program went into an infinite loop.
+
+#############################################################
+#############################################################
+Running Testcase 7
+#############################################################
+#############################################################
+
+Running the following input on your program:
+=============================================================
+maxVal 10 10
+insertR r0 100 0 1
+insertR r1 100 0 1
+insertR r2 100 0 1
+insertR r3 100 1 3
+maxVal 12 12
+deleteR all
+insertR r0 200 0 1
+insertR r1 200 0 2
+insertR r2 200 0 3
+insertR r3 200 1 5
+printR all
+maxVal 15 15
+maxVal 5 5
+printR all
+-------------------------------------------------------------
+
+ERROR: your program exited with a non-zero exit code.
+This means that the program crashed due to a run-time
+error or that your main function returned a value other
+than zero.  Make sure to fix this error before submitting,
+because it may result in a loss of marks!
+
+Your program went into an infinite loop.
+
+
+#############################################################
+################# Summary for 7 test(s) #####################
+#############################################################
+
+Functionality: FAIL: 7 test(s) failed!
+Valgrind:      FAIL: Could not run due to run time errors in 7 tests
+
+#############################################################
+#############################################################
+#############################################################
