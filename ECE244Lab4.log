@@ -21,26 +21,6 @@ setV 0 6.125
 unsetV 0
 -------------------------------------------------------------
 
-Your program produced the following output:
-=============================================================
-> Error: node 51 is out of permitted range 0--1
-> Error: node 0 is out of permitted range 0--1
-> Error: node 0 is out of permitted range 0--1
-> Error: node 1 is out of permitted range 0--1
-> Error: node -1 is out of permitted range 0--1
-> Error: node -1 is out of permitted range 0--1
-> Error: node -1 is out of permitted range 0--1
-> Error: node 51 is out of permitted range 0--1
-> Error: resistor r5 not found
-> Print:
-Error: resistor r5 not found
-> Error: node 5 is out of permitted range 0--1
-> > Error: Invalid command
-> > Error: Invalid command
-> 
--------------------------------------------------------------
-
-<<<<<<<<< Comparing output to solution >>>>>>>>>>>>
 
 
 Output did not match the solution
@@ -85,61 +65,6 @@ Connections at node 5: 3 resistor(s)
 > Unset: the solver will determine the voltage of node 0
 > 
 -------------------------------------------------------------
-Running diff on program output and solution output
-( < actual output vs > expected output )
-=============================================================
-1,9d0
-< > Error: node 51 is out of permitted range 0--1
-< > Error: node 0 is out of permitted range 0--1
-< > Error: node 0 is out of permitted range 0--1
-< > Error: node 1 is out of permitted range 0--1
-< > Error: node -1 is out of permitted range 0--1
-< > Error: node -1 is out of permitted range 0--1
-< > Error: node -1 is out of permitted range 0--1
-< > Error: node 51 is out of permitted range 0--1
-< > Error: resistor r5 not found
-11,14c2,34
-< Error: resistor r5 not found
-< > Error: node 5 is out of permitted range 0--1
-< > > Error: Invalid command
-< > > Error: Invalid command
----
-> > Inserted: resistor r0 100.00 Ohms 0 -> 1
-> > Inserted: resistor r1 50.00 Ohms 0 -> 5
-> > Inserted: resistor r2 25.00 Ohms 1 -> 5
-> > Inserted: resistor r3 12.50 Ohms -1 -> 0
-> > Inserted: resistor r4 6.25 Ohms -1 -> 1
-> > Inserted: resistor r5 3.00 Ohms -1 -> 5
-> > Print:
-> Connections at node -1: 3 resistor(s)
->   r3                      12.50 Ohms -1 -> 0
->   r4                       6.25 Ohms -1 -> 1
->   r5                       3.00 Ohms -1 -> 5
-> Connections at node 0: 3 resistor(s)
->   r0                     100.00 Ohms 0 -> 1
->   r1                      50.00 Ohms 0 -> 5
->   r3                      12.50 Ohms -1 -> 0
-> Connections at node 1: 3 resistor(s)
->   r0                     100.00 Ohms 0 -> 1
->   r2                      25.00 Ohms 1 -> 5
->   r4                       6.25 Ohms -1 -> 1
-> Connections at node 5: 3 resistor(s)
->   r1                      50.00 Ohms 0 -> 5
->   r2                      25.00 Ohms 1 -> 5
->   r5                       3.00 Ohms -1 -> 5
-> > Modified: resistor r5 from 3.00 Ohms to 3.12 Ohms
-> > Print:
-> r5                       3.12 Ohms -1 -> 5
-> > Print:
-> Connections at node 5: 3 resistor(s)
->   r1                      50.00 Ohms 0 -> 5
->   r2                      25.00 Ohms 1 -> 5
->   r5                       3.12 Ohms -1 -> 5
-> > Set: node 0 to 6.12 Volts
-> > Unset: the solver will determine the voltage of node 0
--------------------------------------------------------------
-
-Running valgrind to check for memory leaks
 
 ############### Testcase 1 Results ##########################
 Functionality: FAIL - Output did not match solution
@@ -168,22 +93,6 @@ printNode all
 deleteR all
 -------------------------------------------------------------
 
-Your program produced the following output:
-=============================================================
-> Error: node 0 is out of permitted range 0--1
-> Error: node 0 is out of permitted range 0--1
-> Error: node 1 is out of permitted range 0--1
-> Error: node 0 is out of permitted range 0--1
-> Error: node 1 is out of permitted range 0--1
-> Error: node 2 is out of permitted range 0--1
-> Error: node 51 is out of permitted range 0--1
-> Error: resistor r1 not found
-> Error: resistor r5 not found
-> Error: resistor r6 not found
-> Error: node 51 is out of permitted range 0--1
-> Deleted: all resistors
-> 
--------------------------------------------------------------
 
 <<<<<<<<< Comparing output to solution >>>>>>>>>>>>
 
@@ -236,63 +145,7 @@ Connections at node 3: 2 resistor(s)
 > Deleted: all resistors
 > 
 
--------------------------------------------------------------
-Running diff on program output and solution output
-( < actual output vs > expected output )
-=============================================================
-1,9c1,25
-< > Error: node 0 is out of permitted range 0--1
-< > Error: node 0 is out of permitted range 0--1
-< > Error: node 1 is out of permitted range 0--1
-< > Error: node 0 is out of permitted range 0--1
-< > Error: node 1 is out of permitted range 0--1
-< > Error: node 2 is out of permitted range 0--1
-< > Error: node 51 is out of permitted range 0--1
-< > Error: resistor r1 not found
-< > Error: resistor r5 not found
----
-> > Inserted: resistor r0 100.00 Ohms 0 -> 1
-> > Inserted: resistor r1 50.00 Ohms 0 -> 2
-> > Inserted: resistor r2 25.00 Ohms 1 -> 2
-> > Inserted: resistor r3 12.50 Ohms 0 -> 3
-> > Inserted: resistor r4 6.25 Ohms 1 -> 3
-> > Inserted: resistor r5 3.00 Ohms 2 -> 3
-> > Print:
-> Connections at node 0: 3 resistor(s)
->   r0                     100.00 Ohms 0 -> 1
->   r1                      50.00 Ohms 0 -> 2
->   r3                      12.50 Ohms 0 -> 3
-> Connections at node 1: 3 resistor(s)
->   r0                     100.00 Ohms 0 -> 1
->   r2                      25.00 Ohms 1 -> 2
->   r4                       6.25 Ohms 1 -> 3
-> Connections at node 2: 3 resistor(s)
->   r1                      50.00 Ohms 0 -> 2
->   r2                      25.00 Ohms 1 -> 2
->   r5                       3.00 Ohms 2 -> 3
-> Connections at node 3: 3 resistor(s)
->   r3                      12.50 Ohms 0 -> 3
->   r4                       6.25 Ohms 1 -> 3
->   r5                       3.00 Ohms 2 -> 3
-> > Deleted: resistor r1
-> > Deleted: resistor r5
-11c27,39
-< > Error: node 51 is out of permitted range 0--1
----
-> > Print:
-> Connections at node 0: 2 resistor(s)
->   r0                     100.00 Ohms 0 -> 1
->   r3                      12.50 Ohms 0 -> 3
-> Connections at node 1: 3 resistor(s)
->   r0                     100.00 Ohms 0 -> 1
->   r2                      25.00 Ohms 1 -> 2
->   r4                       6.25 Ohms 1 -> 3
-> Connections at node 2: 1 resistor(s)
->   r2                      25.00 Ohms 1 -> 2
-> Connections at node 3: 2 resistor(s)
->   r3                      12.50 Ohms 0 -> 3
->   r4                       6.25 Ohms 1 -> 3
--------------------------------------------------------------
+
 
 Running valgrind to check for memory leaks
 
@@ -323,23 +176,6 @@ insertR r6 127 1 2
 solve
 -------------------------------------------------------------
 
-Your program produced the following output:
-=============================================================
-> Error: node 0 is out of permitted range 0--1
-> Error: node 0 is out of permitted range 0--1
-> Error: node 1 is out of permitted range 0--1
-> Error: node 0 is out of permitted range 0--1
-> Error: node 1 is out of permitted range 0--1
-> Error: node 2 is out of permitted range 0--1
-> > Error: Invalid command
-> > Error: Invalid command
-> Error: resistor r2 not found
-> Error: resistor r5 not found
-> > Error: node 1 is out of permitted range 0--1
-> > 
--------------------------------------------------------------
-
-<<<<<<<<< Comparing output to solution >>>>>>>>>>>>
 
 
 Output did not match the solution
@@ -372,49 +208,6 @@ Solution output:
 > 
 
 -------------------------------------------------------------
-Running diff on program output and solution output
-( < actual output vs > expected output )
-=============================================================
-1,12c1,22
-< > Error: node 0 is out of permitted range 0--1
-< > Error: node 0 is out of permitted range 0--1
-< > Error: node 1 is out of permitted range 0--1
-< > Error: node 0 is out of permitted range 0--1
-< > Error: node 1 is out of permitted range 0--1
-< > Error: node 2 is out of permitted range 0--1
-< > > Error: Invalid command
-< > > Error: Invalid command
-< > Error: resistor r2 not found
-< > Error: resistor r5 not found
-< > > Error: node 1 is out of permitted range 0--1
-< > > 
-\ No newline at end of file
----
-> > Inserted: resistor r0 100.00 Ohms 0 -> 1
-> > Inserted: resistor r1 150.00 Ohms 0 -> 2
-> > Inserted: resistor r2 200.00 Ohms 1 -> 2
-> > Inserted: resistor r3 268.00 Ohms 0 -> 3
-> > Inserted: resistor r4 300.00 Ohms 1 -> 3
-> > Inserted: resistor r5 350.00 Ohms 2 -> 3
-> > Set: node 0 to -2.00 Volts
-> > Set: node 2 to 3.00 Volts
-> > Deleted: resistor r2
-> > Deleted: resistor r5
-> > Solve:
->   Node 0: -2.00 V
->   Node 1: -2.00 V
->   Node 2: 3.00 V
->   Node 3: -2.00 V
-> > Inserted: resistor r6 127.00 Ohms 1 -> 2
-> > Solve:
->   Node 0: -2.00 V
->   Node 1: 0.01 V
->   Node 2: 3.00 V
->   Node 3: -1.05 V
-> > 
--------------------------------------------------------------
-
-Running valgrind to check for memory leaks
 
 ############### Testcase 3 Results ##########################
 Functionality: FAIL - Output did not match solution
@@ -444,26 +237,6 @@ deleteR all
 printNode all
 -------------------------------------------------------------
 
-Your program produced the following output:
-=============================================================
-> Error: node 1 is out of permitted range 0--1
-> Error: node 0 is out of permitted range 0--1
-> Error: node 2 is out of permitted range 0--1
-> Error: node 0 is out of permitted range 0--1
-> Error: node 0 is out of permitted range 0--1
-> Error: node 4 is out of permitted range 0--1
-> Error: node 5 is out of permitted range 0--1
-> Error: node 51 is out of permitted range 0--1
-> Error: resistor r1 not found
-> Error: node 51 is out of permitted range 0--1
-> Error: resistor r2 not found
-> Error: node 51 is out of permitted range 0--1
-> Deleted: all resistors
-> Error: node 51 is out of permitted range 0--1
-> 
--------------------------------------------------------------
-
-<<<<<<<<< Comparing output to solution >>>>>>>>>>>>
 
 
 Output did not match the solution
@@ -542,95 +315,6 @@ Connections at node 5: 2 resistor(s)
 > Print:
 > 
 
--------------------------------------------------------------
-Running diff on program output and solution output
-( < actual output vs > expected output )
-=============================================================
-1,12c1,66
-< > Error: node 1 is out of permitted range 0--1
-< > Error: node 0 is out of permitted range 0--1
-< > Error: node 2 is out of permitted range 0--1
-< > Error: node 0 is out of permitted range 0--1
-< > Error: node 0 is out of permitted range 0--1
-< > Error: node 4 is out of permitted range 0--1
-< > Error: node 5 is out of permitted range 0--1
-< > Error: node 51 is out of permitted range 0--1
-< > Error: resistor r1 not found
-< > Error: node 51 is out of permitted range 0--1
-< > Error: resistor r2 not found
-< > Error: node 51 is out of permitted range 0--1
----
-> > Inserted: resistor r0 100.00 Ohms 1 -> 4
-> > Inserted: resistor r1 125.00 Ohms 0 -> 5
-> > Inserted: resistor r2 250.00 Ohms 2 -> 3
-> > Inserted: resistor r3 300.00 Ohms 0 -> 1
-> > Inserted: resistor r4 400.00 Ohms 0 -> 2
-> > Inserted: resistor r5 500.00 Ohms 4 -> 5
-> > Inserted: resistor r6 600.00 Ohms 5 -> 3
-> > Print:
-> Connections at node 0: 3 resistor(s)
->   r1                     125.00 Ohms 0 -> 5
->   r3                     300.00 Ohms 0 -> 1
->   r4                     400.00 Ohms 0 -> 2
-> Connections at node 1: 2 resistor(s)
->   r0                     100.00 Ohms 1 -> 4
->   r3                     300.00 Ohms 0 -> 1
-> Connections at node 2: 2 resistor(s)
->   r2                     250.00 Ohms 2 -> 3
->   r4                     400.00 Ohms 0 -> 2
-> Connections at node 3: 2 resistor(s)
->   r2                     250.00 Ohms 2 -> 3
->   r6                     600.00 Ohms 5 -> 3
-> Connections at node 4: 2 resistor(s)
->   r0                     100.00 Ohms 1 -> 4
->   r5                     500.00 Ohms 4 -> 5
-> Connections at node 5: 3 resistor(s)
->   r1                     125.00 Ohms 0 -> 5
->   r5                     500.00 Ohms 4 -> 5
->   r6                     600.00 Ohms 5 -> 3
-> > Deleted: resistor r1
-> > Print:
-> Connections at node 0: 2 resistor(s)
->   r3                     300.00 Ohms 0 -> 1
->   r4                     400.00 Ohms 0 -> 2
-> Connections at node 1: 2 resistor(s)
->   r0                     100.00 Ohms 1 -> 4
->   r3                     300.00 Ohms 0 -> 1
-> Connections at node 2: 2 resistor(s)
->   r2                     250.00 Ohms 2 -> 3
->   r4                     400.00 Ohms 0 -> 2
-> Connections at node 3: 2 resistor(s)
->   r2                     250.00 Ohms 2 -> 3
->   r6                     600.00 Ohms 5 -> 3
-> Connections at node 4: 2 resistor(s)
->   r0                     100.00 Ohms 1 -> 4
->   r5                     500.00 Ohms 4 -> 5
-> Connections at node 5: 2 resistor(s)
->   r5                     500.00 Ohms 4 -> 5
->   r6                     600.00 Ohms 5 -> 3
-> > Deleted: resistor r2
-> > Print:
-> Connections at node 0: 2 resistor(s)
->   r3                     300.00 Ohms 0 -> 1
->   r4                     400.00 Ohms 0 -> 2
-> Connections at node 1: 2 resistor(s)
->   r0                     100.00 Ohms 1 -> 4
->   r3                     300.00 Ohms 0 -> 1
-> Connections at node 2: 1 resistor(s)
->   r4                     400.00 Ohms 0 -> 2
-> Connections at node 3: 1 resistor(s)
->   r6                     600.00 Ohms 5 -> 3
-> Connections at node 4: 2 resistor(s)
->   r0                     100.00 Ohms 1 -> 4
->   r5                     500.00 Ohms 4 -> 5
-> Connections at node 5: 2 resistor(s)
->   r5                     500.00 Ohms 4 -> 5
->   r6                     600.00 Ohms 5 -> 3
-14c68
-< > Error: node 51 is out of permitted range 0--1
----
-> > Print:
--------------------------------------------------------------
 
 Running valgrind to check for memory leaks
 
@@ -666,28 +350,7 @@ printNode all
 solve
 -------------------------------------------------------------
 
-Your program produced the following output:
-=============================================================
-> Error: node 0 is out of permitted range 0--1
-> Error: node 0 is out of permitted range 0--1
-> Error: node 1 is out of permitted range 0--1
-> Error: node 1 is out of permitted range 0--1
-> Error: node 2 is out of permitted range 0--1
-> Error: node 3 is out of permitted range 0--1
-> Error: node 4 is out of permitted range 0--1
-> Error: node 4 is out of permitted range 0--1
-> Error: node 5 is out of permitted range 0--1
-> Error: node 5 is out of permitted range 0--1
-> Error: node 6 is out of permitted range 0--1
-> Error: node 2 is out of permitted range 0--1
-> Error: node 1 is out of permitted range 0--1
-> > Error: Invalid command
-> > Error: Invalid command
-> Error: node 51 is out of permitted range 0--1
-> > 
--------------------------------------------------------------
 
-<<<<<<<<< Comparing output to solution >>>>>>>>>>>>
 
 
 Output did not match the solution
@@ -757,91 +420,6 @@ Connections at node 7: 2 resistor(s)
   Node 7: -12.00 V
 > 
 -------------------------------------------------------------
-Running diff on program output and solution output
-( < actual output vs > expected output )
-=============================================================
-1,17c1,60
-< > Error: node 0 is out of permitted range 0--1
-< > Error: node 0 is out of permitted range 0--1
-< > Error: node 1 is out of permitted range 0--1
-< > Error: node 1 is out of permitted range 0--1
-< > Error: node 2 is out of permitted range 0--1
-< > Error: node 3 is out of permitted range 0--1
-< > Error: node 4 is out of permitted range 0--1
-< > Error: node 4 is out of permitted range 0--1
-< > Error: node 5 is out of permitted range 0--1
-< > Error: node 5 is out of permitted range 0--1
-< > Error: node 6 is out of permitted range 0--1
-< > Error: node 2 is out of permitted range 0--1
-< > Error: node 1 is out of permitted range 0--1
-< > > Error: Invalid command
-< > > Error: Invalid command
-< > Error: node 51 is out of permitted range 0--1
-< > > 
-\ No newline at end of file
----
-> > Inserted: resistor r0 100.00 Ohms 0 -> 1
-> > Inserted: resistor r1 200.00 Ohms 0 -> 2
-> > Inserted: resistor r2 300.00 Ohms 1 -> 2
-> > Inserted: resistor r3 400.00 Ohms 1 -> 3
-> > Inserted: resistor r4 500.00 Ohms 2 -> 3
-> > Inserted: resistor r5 1000.00 Ohms 3 -> 4
-> > Inserted: resistor r6 575.00 Ohms 4 -> 5
-> > Inserted: resistor r7 425.00 Ohms 4 -> 6
-> > Inserted: resistor r8 382.00 Ohms 5 -> 6
-> > Inserted: resistor r9 296.00 Ohms 5 -> 7
-> > Inserted: resistor r10 67.00 Ohms 6 -> 7
-> > Inserted: resistor r11 980.00 Ohms 2 -> 6
-> > Inserted: resistor r12 875.00 Ohms 1 -> 5
-> > Set: node 0 to 12.00 Volts
-> > Set: node 7 to -12.00 Volts
-> > Print:
-> Connections at node 0: 2 resistor(s)
->   r0                     100.00 Ohms 0 -> 1
->   r1                     200.00 Ohms 0 -> 2
-> Connections at node 1: 4 resistor(s)
->   r0                     100.00 Ohms 0 -> 1
->   r2                     300.00 Ohms 1 -> 2
->   r3                     400.00 Ohms 1 -> 3
->   r12                    875.00 Ohms 1 -> 5
-> Connections at node 2: 4 resistor(s)
->   r1                     200.00 Ohms 0 -> 2
->   r2                     300.00 Ohms 1 -> 2
->   r4                     500.00 Ohms 2 -> 3
->   r11                    980.00 Ohms 2 -> 6
-> Connections at node 3: 3 resistor(s)
->   r3                     400.00 Ohms 1 -> 3
->   r4                     500.00 Ohms 2 -> 3
->   r5                    1000.00 Ohms 3 -> 4
-> Connections at node 4: 3 resistor(s)
->   r5                    1000.00 Ohms 3 -> 4
->   r6                     575.00 Ohms 4 -> 5
->   r7                     425.00 Ohms 4 -> 6
-> Connections at node 5: 4 resistor(s)
->   r6                     575.00 Ohms 4 -> 5
->   r8                     382.00 Ohms 5 -> 6
->   r9                     296.00 Ohms 5 -> 7
->   r12                    875.00 Ohms 1 -> 5
-> Connections at node 6: 4 resistor(s)
->   r7                     425.00 Ohms 4 -> 6
->   r8                     382.00 Ohms 5 -> 6
->   r10                     67.00 Ohms 6 -> 7
->   r11                    980.00 Ohms 2 -> 6
-> Connections at node 7: 2 resistor(s)
->   r9                     296.00 Ohms 5 -> 7
->   r10                     67.00 Ohms 6 -> 7
-> > Solve:
->   Node 0: 12.00 V
->   Node 1: 9.05 V
->   Node 2: 8.12 V
->   Node 3: 6.00 V
->   Node 4: -5.87 V
->   Node 5: -7.43 V
->   Node 6: -9.76 V
->   Node 7: -12.00 V
-> > 
-\ No newline at end of file
--------------------------------------------------------------
 
 Running valgrind to check for memory leaks
 
@@ -874,24 +452,6 @@ solve
 printNode all
 -------------------------------------------------------------
 
-Your program produced the following output:
-=============================================================
-> Error: node 6 is out of permitted range 0--1
-> Error: node 5 is out of permitted range 0--1
-> Error: node 2 is out of permitted range 0--1
-> Error: node 3 is out of permitted range 0--1
-> Print:
-Error: resistor r7 not found
-> Error: resistor r8 not found
-> > > Error: Invalid command
-> > Error: Invalid command
-> > > Error: Invalid command
-> > > Error: Invalid command
-> > Error: node 51 is out of permitted range 0--1
-> 
--------------------------------------------------------------
-
-<<<<<<<<< Comparing output to solution >>>>>>>>>>>>
 
 
 Output did not match the solution
@@ -946,69 +506,7 @@ Connections at node 6: 1 resistor(s)
 >
 
 -------------------------------------------------------------
-Running diff on program output and solution output
-( < actual output vs > expected output )
-=============================================================
-1,6c1,5
-< > Error: node 6 is out of permitted range 0--1
-< > Error: node 5 is out of permitted range 0--1
-< > Error: node 2 is out of permitted range 0--1
-< > Error: node 3 is out of permitted range 0--1
-< > Print:
-< Error: resistor r7 not found
----
-> > Inserted: resistor r1 100.00 Ohms 6 -> 5
-> > Inserted: resistor r3 200.00 Ohms 5 -> 3
-> > Inserted: resistor r4 150.00 Ohms 2 -> 3
-> > Inserted: resistor r5 120.00 Ohms 3 -> 4
-> > Error: resistor r7 not found
-8,12c7,43
-< > > > Error: Invalid command
-< > > Error: Invalid command
-< > > > Error: Invalid command
-< > > > Error: Invalid command
-< > > Error: node 51 is out of permitted range 0--1
----
-> > Error: no nodes have their voltage set
-> > Set: node 4 to -0.60 Volts
-> > Set: node 6 to 1.00 Volts
-> > Solve:
->   Node 2: -0.14 V
->   Node 3: -0.14 V
->   Node 4: -0.60 V
->   Node 5: 0.62 V
->   Node 6: 1.00 V
-> > Error: node 7 not found
-> > Solve:
->   Node 2: -0.14 V
->   Node 3: -0.14 V
->   Node 4: -0.60 V
->   Node 5: 0.62 V
->   Node 6: 1.00 V
-> > Error: node 8 not found
-> > Solve:
->   Node 2: -0.14 V
->   Node 3: -0.14 V
->   Node 4: -0.60 V
->   Node 5: 0.62 V
->   Node 6: 1.00 V
-> > Print:
-> Connections at node 2: 1 resistor(s)
->   r4                     150.00 Ohms 2 -> 3
-> Connections at node 3: 3 resistor(s)
->   r3                     200.00 Ohms 5 -> 3
->   r4                     150.00 Ohms 2 -> 3
->   r5                     120.00 Ohms 3 -> 4
-> Connections at node 4: 1 resistor(s)
->   r5                     120.00 Ohms 3 -> 4
-> Connections at node 5: 2 resistor(s)
->   r1                     100.00 Ohms 6 -> 5
->   r3                     200.00 Ohms 5 -> 3
-> Connections at node 6: 1 resistor(s)
->   r1                     100.00 Ohms 6 -> 5
--------------------------------------------------------------
 
-Running valgrind to check for memory leaks
 
 ############### Testcase 6 Results ##########################
 Functionality: FAIL - Output did not match solution
