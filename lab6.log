@@ -21,27 +21,6 @@ perimeter
 printall
 -------------------------------------------------------------
 
-Your program produced the following output:
-=============================================================
-> invalid command
-> invalid command
-> invalid command
-> > invalid command
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> Error: entry does not exist
-> invalid command
-> invalid command
-> > 
--------------------------------------------------------------
-
-<<<<<<<<< Comparing output to solution >>>>>>>>>>>>
-
-
-Output did not match the solution
-The following output would have been accepted:
 
 
 Solution output:
@@ -65,42 +44,7 @@ r2 blue center: (9.0,9.0) rectangle width: 6.0 height: 3.0
 r4 grey55 center: (5.0,-2.0) rectangle width: 8.0 height: 7.0
 > 
 -------------------------------------------------------------
-Running diff on program output and solution output
-( < actual output vs > expected output )
-=============================================================
-1,12c1,18
-< > invalid command
-< > invalid command
-< > invalid command
-< > > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > Error: entry does not exist
-< > invalid command
-< > invalid command
-< > > 
-\ No newline at end of file
----
-> > Success
-> > Success
-> > Success
-> > r1 cyan center: (-5.0,-1.0) rectangle width: 4.0 height: 10.0
-> r2 blue center: (9.0,9.0) rectangle width: 6.0 height: 3.0
-> r3 darkgreen center: (8.0,-6.0) rectangle width: 3.0 height: 4.0
-> > Total perimeter: 60.0
-> > Total area: 70.0
-> > Success
-> > Error: could not find shape at (10.0,11.0)
-> > Success
-> > Success
-> > Total area: 84.0
-> > Total perimeter: 62.0
-> > r1 cyan center: (-5.0,-1.0) rectangle width: 2.0 height: 5.0
-> r2 blue center: (9.0,9.0) rectangle width: 6.0 height: 3.0
-> r4 grey55 center: (5.0,-2.0) rectangle width: 8.0 height: 7.0
-> > 
+
 \ No newline at end of file
 -------------------------------------------------------------
 
@@ -133,21 +77,7 @@ perimeter
 printall
 -------------------------------------------------------------
 
-Your program produced the following output:
-=============================================================
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> > invalid command
-> invalid command
-> invalid command
-> Error: entry does not exist
-> invalid command
-> invalid command
-> > 
--------------------------------------------------------------
+
 
 <<<<<<<<< Comparing output to solution >>>>>>>>>>>>
 
@@ -177,46 +107,7 @@ c4 yellow center: (10.0,-10.0) circle radius: 4.0
 c3 grey75 center: (-8.0,6.0) circle radius: 3.0
 c4 yellow center: (10.0,-10.0) circle radius: 4.0
 > 
--------------------------------------------------------------
-Running diff on program output and solution output
-( < actual output vs > expected output )
-=============================================================
-1,12c1,19
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > > invalid command
-< > invalid command
-< > invalid command
-< > Error: entry does not exist
-< > invalid command
-< > invalid command
-< > > 
-\ No newline at end of file
----
-> > Success
-> > Success
-> > Success
-> > Success
-> > Success
-> > c1 red center: (3.0,5.0) circle radius: 2.0
-> c2 green center: (-2.0,-2.0) circle radius: 2.0
-> c3 grey75 center: (-8.0,6.0) circle radius: 3.0
-> c4 yellow center: (10.0,-10.0) circle radius: 4.0
-> > Total area: 103.6
-> > Total perimeter: 69.1
-> > Success
-> > Success
-> > Total area: 85.6
-> > Total perimeter: 53.4
-> > c2 green center: (-2.0,-2.0) circle radius: 1.5
-> c3 grey75 center: (-8.0,6.0) circle radius: 3.0
-> c4 yellow center: (10.0,-10.0) circle radius: 4.0
-> > 
-\ No newline at end of file
--------------------------------------------------------------
+
 
 Running valgrind to check for memory leaks
 
@@ -245,19 +136,6 @@ perimeter
 printall
 -------------------------------------------------------------
 
-Your program produced the following output:
-=============================================================
-> invalid command
-> invalid command
-> invalid command
-> > invalid command
-> invalid command
-> invalid command
-> Error: entry does not exist
-> invalid command
-> invalid command
-> > 
--------------------------------------------------------------
 
 <<<<<<<<< Comparing output to solution >>>>>>>>>>>>
 
@@ -284,38 +162,7 @@ p3 darkgreen center: (-3.7,3.7) polygon (-1.0,1.0) (-7.0,2.0) (-3.0,8.0)
 p2 blue center: (-2.6,-1.6) polygon (0.0,0.0) (-1.0,-5.0) (-4.0,-4.0) (-5.0,-1.0) (-3.0,2.0)
 > 
 -------------------------------------------------------------
-Running diff on program output and solution output
-( < actual output vs > expected output )
-=============================================================
-1,10c1,15
-< > invalid command
-< > invalid command
-< > invalid command
-< > > invalid command
-< > invalid command
-< > invalid command
-< > Error: entry does not exist
-< > invalid command
-< > invalid command
-< > > 
-\ No newline at end of file
----
-> > Success
-> > Success
-> > Success
-> > p1 cyan center: (2.8,3.7) polygon (0.0,5.0) (2.0,6.0) (4.0,6.0) (5.0,5.0) (4.0,0.0) (2.0,0.0)
-> p2 blue center: (-2.6,-1.6) polygon (0.0,0.0) (-1.0,-5.0) (-4.0,-4.0) (-5.0,-1.0) (-3.0,2.0)
-> p3 darkgreen center: (-3.7,3.7) polygon (-1.0,1.0) (-7.0,2.0) (-3.0,8.0)
-> > Total perimeter: 57.3
-> > Total area: 63.5
-> > Success
-> > Success
-> > Total area: 106.5
-> > Total perimeter: 54.9
-> > p1 cyan center: (2.8,3.7) polygon (-2.8,6.3) (1.2,8.3) (5.2,8.3) (7.2,6.3) (5.2,-3.7) (1.2,-3.7)
-> p2 blue center: (-2.6,-1.6) polygon (0.0,0.0) (-1.0,-5.0) (-4.0,-4.0) (-5.0,-1.0) (-3.0,2.0)
-> > 
-\ No newline at end of file
+
 -------------------------------------------------------------
 
 Running valgrind to check for memory leaks
@@ -346,84 +193,15 @@ perimeter
 printall
 -------------------------------------------------------------
 
-Your program produced the following output:
-=============================================================
-> invalid command
-> invalid command
-> invalid command
-> > invalid command
-> invalid command
-> invalid command
-> invalid command
-> Error: entry does not exist
-> invalid command
-> invalid command
-> > 
--------------------------------------------------------------
 
-<<<<<<<<< Comparing output to solution >>>>>>>>>>>>
 
 
 Output did not match the solution
 The following output would have been accepted:
 
 
-Solution output:
-=============================================================
-> Success
-> Success
-> Success
-> p1 cyan center: (2.8,3.7) polygon (0.0,5.0) (2.0,6.0) (4.0,6.0) (5.0,5.0) (4.0,0.0) (2.0,0.0)
-p2 blue center: (-2.6,-1.6) polygon (0.0,0.0) (-1.0,-5.0) (-4.0,-4.0) (-5.0,-1.0) (-3.0,2.0)
-p3 darkgreen center: (-3.7,3.7) polygon (-1.0,1.0) (-7.0,2.0) (-3.0,8.0)
-> Total perimeter: 57.3
-> Total area: 63.5
-> Success
-> Success
-> Success
-> Total area: 106.5
-> Total perimeter: 54.9
-> p1 cyan center: (2.8,3.7) polygon (-2.8,6.3) (1.2,8.3) (5.2,8.3) (7.2,6.3) (5.2,-3.7) (1.2,-3.7)
-p2 blue center: (9.4,-3.6) polygon (12.0,-2.0) (11.0,-7.0) (8.0,-6.0) (7.0,-3.0) (9.0,0.0)
-> 
--------------------------------------------------------------
-Running diff on program output and solution output
-( < actual output vs > expected output )
-=============================================================
-1,11c1,16
-< > invalid command
-< > invalid command
-< > invalid command
-< > > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > Error: entry does not exist
-< > invalid command
-< > invalid command
-< > > 
-\ No newline at end of file
----
-> > Success
-> > Success
-> > Success
-> > p1 cyan center: (2.8,3.7) polygon (0.0,5.0) (2.0,6.0) (4.0,6.0) (5.0,5.0) (4.0,0.0) (2.0,0.0)
-> p2 blue center: (-2.6,-1.6) polygon (0.0,0.0) (-1.0,-5.0) (-4.0,-4.0) (-5.0,-1.0) (-3.0,2.0)
-> p3 darkgreen center: (-3.7,3.7) polygon (-1.0,1.0) (-7.0,2.0) (-3.0,8.0)
-> > Total perimeter: 57.3
-> > Total area: 63.5
-> > Success
-> > Success
-> > Success
-> > Total area: 106.5
-> > Total perimeter: 54.9
-> > p1 cyan center: (2.8,3.7) polygon (-2.8,6.3) (1.2,8.3) (5.2,8.3) (7.2,6.3) (5.2,-3.7) (1.2,-3.7)
-> p2 blue center: (9.4,-3.6) polygon (12.0,-2.0) (11.0,-7.0) (8.0,-6.0) (7.0,-3.0) (9.0,0.0)
-> > 
-\ No newline at end of file
--------------------------------------------------------------
 
-Running valgrind to check for memory leaks
+
 
 ############### Testcase 4 Results ##########################
 Functionality: FAIL - Output did not match solution
@@ -449,18 +227,7 @@ perimeter
 printall
 -------------------------------------------------------------
 
-Your program produced the following output:
-=============================================================
-> invalid command
-> > invalid command
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> > 
--------------------------------------------------------------
+
 
 <<<<<<<<< Comparing output to solution >>>>>>>>>>>>
 
@@ -482,35 +249,7 @@ Solution output:
 > Total perimeter: 67.2
 > p1 cyan center: (6.0,5.7) polygon (-4.0,12.3) (0.0,4.3) (12.0,4.3) (16.0,12.3) (12.0,0.3) (0.0,0.3)
 > 
--------------------------------------------------------------
-Running diff on program output and solution output
-( < actual output vs > expected output )
-=============================================================
-1,9c1,11
-< > invalid command
-< > > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > > 
-\ No newline at end of file
----
-> > Success
-> > p1 cyan center: (5.0,2.7) polygon (0.0,6.0) (2.0,2.0) (8.0,2.0) (10.0,6.0) (8.0,0.0) (2.0,0.0)
-> > Total perimeter: 33.6
-> > Total area: 16.0
-> > Error: could not find shape at (5.0,2.5)
-> > Success
-> > Success
-> > Total area: 64.0
-> > Total perimeter: 67.2
-> > p1 cyan center: (6.0,5.7) polygon (-4.0,12.3) (0.0,4.3) (12.0,4.3) (16.0,12.3) (12.0,0.3) (0.0,0.3)
-> > 
-\ No newline at end of file
--------------------------------------------------------------
+
 
 Running valgrind to check for memory leaks
 
@@ -545,26 +284,7 @@ perimeter
 printall
 -------------------------------------------------------------
 
-Your program produced the following output:
-=============================================================
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> invalid command
-> > 
--------------------------------------------------------------
+
 
 <<<<<<<<< Comparing output to solution >>>>>>>>>>>>
 
@@ -600,57 +320,7 @@ hat2 black center: (10.0,20.3) triangle (5.0,19.0) (10.0,23.0) (15.0,19.0)
 H green center: (19.0,5.0) polygon (18.5,4.0) (18.5,6.0) (18.7,6.0) (18.7,5.1) (19.2,5.1) (19.2,6.0) (19.4,6.0) (19.4,4.0) (19.2,4.0) (19.2,4.9) (18.7,4.9) (18.7,4.0)
 I green center: (20.0,5.0) polygon (19.6,4.0) (19.6,4.2) (19.9,4.2) (19.9,5.8) (19.6,5.8) (19.6,6.0) (20.4,6.0) (20.4,5.8) (20.1,5.8) (20.1,4.2) (20.4,4.2) (20.4,4.0)
 > 
--------------------------------------------------------------
-Running diff on program output and solution output
-( < actual output vs > expected output )
-=============================================================
-1,17c1,25
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > invalid command
-< > > 
-\ No newline at end of file
----
-> > Success
-> > Success
-> > Success
-> > Success
-> > Success
-> > Success
-> > Success
-> > Success
-> > Success
-> > Success
-> > Success
-> > Success
-> > Success
-> > Success
-> > Total area: 344.2
-> > Total perimeter: 178.8
-> > face yellow center: (10.0,10.0) circle radius: 9.0
-> leye blue center: (6.5,14.0) circle radius: 2.2
-> reye blue center: (13.5,14.0) circle radius: 2.2
-> mouth red center: (10.0,5.4) polygon (7.0,4.0) (4.7,6.5) (7.0,5.4) (13.0,5.4) (15.3,6.5) (13.0,4.7)
-> hat1 black center: (10.0,18.0) rectangle width: 14.0 height: 2.0
-> hat2 black center: (10.0,20.3) triangle (5.0,19.0) (10.0,23.0) (15.0,19.0)
-> H green center: (19.0,5.0) polygon (18.5,4.0) (18.5,6.0) (18.7,6.0) (18.7,5.1) (19.2,5.1) (19.2,6.0) (19.4,6.0) (19.4,4.0) (19.2,4.0) (19.2,4.9) (18.7,4.9) (18.7,4.0)
-> I green center: (20.0,5.0) polygon (19.6,4.0) (19.6,4.2) (19.9,4.2) (19.9,5.8) (19.6,5.8) (19.6,6.0) (20.4,6.0) (20.4,5.8) (20.1,5.8) (20.1,4.2) (20.4,4.2) (20.4,4.0)
-> > 
-\ No newline at end of file
--------------------------------------------------------------
+
 
 Running valgrind to check for memory leaks
 
